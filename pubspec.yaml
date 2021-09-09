@@ -1,7 +1,7 @@
 name: vn_provinces
 description: Fetch all Vietnam Provinces.
 version: 0.0.1
-homepage: https://gonex.net
+homepage: https://github.com/gonexteam/vn_provinces
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
@@ -10,11 +10,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  slug_it: ^0.0.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  slug_it: ^0.0.1
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
