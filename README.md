@@ -1,4 +1,4 @@
-# vn_provinces
+# Vietnam provinces
 
 List all Vietnam Provinces. 
 
