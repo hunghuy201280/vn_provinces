@@ -8,9 +8,7 @@ import 'province.dart';
 
 /// VNProvinces.
 class VNProvinces {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-
+  /// Returns [VNProvince] fetch all province in vietnam.
   List<VNProvince> allProvince({keyword: String}) {
     List<VNProvince> provinces = [];
     provinces = vnProvinces.values.toList();
@@ -23,7 +21,7 @@ class VNProvinces {
 
     return provinces;
   }
-
+  /// Returns [VNDistrict] fetch all district by [provinceCode] in vietnam.
   List<VNDistrict> allDistrict(int provinceCode, {keyword: String}) {
     List<VNDistrict> districts = [];
     var districtsRaw = vnDistricts.values.toList();
@@ -31,8 +29,8 @@ class VNProvinces {
       keyword = SlugIT().makeSlug(keyword, separator: '_');
       districts = districtsRaw
           .where((element) =>
-      element.provinceCode == provinceCode &&
-          element.codename.contains(keyword))
+              element.provinceCode == provinceCode &&
+              element.codename.contains(keyword))
           .toList();
     } else {
       districts = districtsRaw
@@ -41,7 +39,7 @@ class VNProvinces {
     }
     return districts;
   }
-
+  /// Returns [VNWard] fetch all ward by [districtCode] in vietnam.
   List<VNWard> allWard(int districtCode, {keyword: String}) {
     List<VNWard> wards = [];
     var wardRaw = vnWards.values.toList();
@@ -49,8 +47,8 @@ class VNProvinces {
       keyword = SlugIT().makeSlug(keyword, separator: '_');
       wards = wardRaw
           .where((element) =>
-      element.districtCode == districtCode &&
-          element.codename.contains(keyword))
+              element.districtCode == districtCode &&
+              element.codename.contains(keyword))
           .toList();
     } else {
       wards = wardRaw
@@ -59,5 +57,4 @@ class VNProvinces {
     }
     return wards;
   }
-
 }

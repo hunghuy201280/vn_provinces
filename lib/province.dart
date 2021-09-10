@@ -1,3 +1,4 @@
+/// [VietnamDivisionType] this is enum type of division in Vietnam
 enum VietnamDivisionType {
   // Level 1
   TINH,
@@ -12,7 +13,7 @@ enum VietnamDivisionType {
   THI_TRAN,
   PHUONG,
 }
-
+/// [VnBase] define base information of a division
 class VnBase {
   String name;
   int code;
@@ -26,7 +27,7 @@ class VnBase {
     return this.codename;
   }
 }
-
+/// [VNProvince] define base information of a Province
 class VNProvince extends VnBase {
   int phoneCode;
 
@@ -34,7 +35,7 @@ class VNProvince extends VnBase {
       String codename, this.phoneCode)
       : super(name, code, divisionType, codename);
 }
-
+/// [VNDistrict] define base information of a District
 class VNDistrict extends VnBase {
   int provinceCode;
 
@@ -42,7 +43,7 @@ class VNDistrict extends VnBase {
       String codename, this.provinceCode)
       : super(name, code, divisionType, codename);
 }
-
+/// [VNWard] define base information of a ward
 class VNWard extends VnBase {
   int districtCode;
 
